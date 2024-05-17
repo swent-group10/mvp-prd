@@ -8,9 +8,13 @@
 
 *Which privacy features do you need from the phone?*
 
+- Camera access
+- Location access
+
 ## Adoptions, Scalability and Availability
 
 *What kind of traffic patterns do you expect to see?*
 
 *Are there known periods of bursty traffic that the MVP must be designed to support?*
 
+- We can expect to see bursts of traffic during key meal times (breakfast, lunch, dinner).
