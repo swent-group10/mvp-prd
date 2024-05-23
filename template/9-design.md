@@ -4,9 +4,7 @@
 
 *List the key libraries, languages, components used by the MVP.*
 
-Languages: Kotlin
-Libraries: Android Jetpack, Hilt, Room, Dagger, JaCoCo, SonarQube, JUnit, Mockito, Espresso
-Components: Material3
+Languages: Kotlin, Android Jetpack Compose, Material3
 
 *If applicable, describe essential screens.*
 
@@ -22,6 +20,10 @@ Map Screen: Users can view nearby friends and their meals.
 
 *Decompose the MVP into functional blocks.*
 
+- Hilt, Room, Dagger, JaCoCo, SonarQube, JUnit, Mockito, Espresso, Firestore, Firebase Auth
+
+
+
 ## Data Model
 
 *What data are you collecting / managing?*
@@ -32,7 +34,7 @@ Map Screen: Users can view nearby friends and their meals.
 
 *How is it organised?*
 
-All data is stored in a noSQL database, with separate collections for users (and their meals) and for posts.
+All data is stored in a NoSQL database, with separate collections for users (and their meals) and for posts.
 
 *Where is it stored?*
 
