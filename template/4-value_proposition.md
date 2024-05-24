@@ -8,9 +8,9 @@ Polyfit provides an innovative, all-in-one solution for managing nutrition and f
 <!-- *1. Easy to communicate* -->
 ### Easy to Communicate
 
-Clear and Simple: "Take a photo, get nutrition facts" clearly conveys the primary function.
-Unified Platform: Emphasizing that Polyfit combines nutrition tracking, graphs of their historic data, and social features makes its value proposition straightforward and appealing.
-Visual and Interactive: The app's visual approach to tracking and sharing progress makes it engaging and easy to understand.
+- Clear and Simple: "Take a photo, get nutrition facts" clearly conveys the primary function.
+- Unified Platform: Emphasizing that Polyfit combines nutrition tracking, graphs of their historic data, and social features makes its value proposition straightforward and appealing.
+- Visual and Interactive: The app's visual approach to tracking and sharing progress makes it engaging and easy to understand.
 
 <!-- *2. Defensible* -->
 ### Defensibility
@@ -20,6 +20,6 @@ In order to become more defensible, Polyfit would need to focus primarily on dev
 <!-- *3. Relevant* -->
 ### Relevance
 
-Current Health Trends: As more people become focused on health and wellness, Polyfit offers a timely and relevant solution.
-Convenience and Efficiency: The app's ability to quickly analyze meals with a photo meets the need for fast and efficient dietary tracking.
-Community Support: The social features align with the growing trend of seeking community and peer support for health and fitness goals.
+- Current Health Trends: As more people become focused on health and wellness, Polyfit offers a timely and relevant solution.
+- Convenience and Efficiency: The app's ability to quickly analyze meals with a photo meets the need for fast and efficient dietary tracking.
+- Community Support: The social features align with the growing trend of seeking community and peer support for health and fitness goals.

@@ -4,15 +4,16 @@
 
 <!-- *Who are the target personas for this product?* -->
 
-- Athletes
 - People who enjoy monitoring their health
 - People trying to gain muscle mass/weight
 - People going through weight loss journeys
 - People who enjoy cooking and want to try new recipes
+- Athletes
 
 <!-- *Which is the key persona?* -->
+### Key Persona
 
-- The key persona is people who enjoy monitoring their health.
+The key persona is people who enjoy monitoring their health.
 
 *High-level scenarios to adopt, use and share the product.*
 
