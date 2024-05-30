@@ -17,7 +17,7 @@ Within our app, we have the following essential screens:
 
 ## Backend
 
-*Decompose the MVP into functional blocks.*
+<!-- *Decompose the MVP into functional blocks.* -->
 
 1. Authentication
     - Firebase Auth: Manage user authentication, including sign-up, login, and password management.
@@ -35,7 +35,7 @@ Within our app, we have the following essential screens:
 
 ## Data Model
 
-*What data are you collecting / managing?*
+<!-- *What data are you collecting / managing?* -->
 
 - User Data:
     - Display/First/Last Name
@@ -74,16 +74,12 @@ Our app data is stored in Firebase Firestore. For static data, we use Firebase S
 
 Data is shared between the frontend and backend using Firebase's `FirebaseFirestore` class. Data is cached locally using Room, a SQL database for offline access.
 
-## Security Considerations
+<!-- *How is the application developed, tested and deployed?* -->
 
-## Infrastructure and Deployment
-
-*How is the application developed, tested and deployed?*
-
-### Testing
+## Testing
 
 We use JUnit and Mockito for unit testing and Espresso for UI testing. We also use JaCoCo for code coverage and SonarQube for static code analysis.
 
-### Deployment
+## Deployment
 
 Our app will be deployed through the Google Play Store. Our backend is hosted on Firebase already. We have no special infrastructure requirements. One step we will need before the MVP is a separate development and production environment.

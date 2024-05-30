@@ -1,6 +1,7 @@
 # User Analytics and Acceptance
 
 To understand how users are using the app, we will track the following metrics:
+
 - Monthly active users
     - Users that log in to the app
 - Monthly new users
