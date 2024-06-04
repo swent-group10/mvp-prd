@@ -74,7 +74,7 @@ Providing detailed nutritional information for scanned items is essential for us
 - Allow users to view detailed breakdowns of their daily, weekly, and monthly intake.
 - Use a standardized nutritional database to ensure accuracy and consistency.
 
-#### Create and Share Posts (Optional)
+#### Create and Share Posts 
 
 **Motivation**
 Creating and sharing posts allows users to interact with the community, share experiences, and gain insights from others. This feature can enhance user engagement.
@@ -84,7 +84,7 @@ Creating and sharing posts allows users to interact with the community, share ex
 - Implement privacy controls to let users manage who can see their posts.
 - Use Firebase for post storage and retrieval, handled by the PostRepository.
 
-#### View Posts within a Radius (Optional)
+#### View Posts within a Radius 
 
 **Motivation**
 Viewing posts within a specific radius helps users connect with others nearby, fostering a sense of community and local support.
@@ -102,7 +102,6 @@ A consistent and intuitive user interface ensures a positive user experience and
 **Proposed Solution**
 - Utilize Material Design 3 (M3) elements to create a cohesive and modern UI.
 - Conduct user testing to refine the interface and improve usability.
-- Ensure accessibility standards are met to make the app usable for everyone.
 
 ### 4. Data Storage
 
