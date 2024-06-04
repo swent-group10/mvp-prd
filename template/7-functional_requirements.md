@@ -20,7 +20,7 @@ To provide a seamless and secure user experience, the app must support user regi
 The ability to scan food items using the camera is essential for determining the composition of the food, which is the primary function of the app. This feature allows users to quickly and easily get nutritional information without manually entering data.
 
 **Proposed Solution**
-- Integrate a barcode and image recognition API (such as Spoonacular and OpenFoodFacts) to enable the camera to scan and identify food items.
+- Integrate a barcode and image recognition API Spoonacular to enable the camera to scan and identify food items.
 - Use the MealViewModel to handle the initialization and updates of meal data from camera scans.
 - Store the results in the LocalDB and sync with Firebase.
 
