@@ -126,7 +126,7 @@ Allowing users to access their data across multiple devices enhances convenience
 
 ## Architectural Diagram
 
-
+![Architecture Diagram](Architecture.png)
 
 
 
