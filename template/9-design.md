@@ -2,63 +2,84 @@
 
 ## Frontend
 
-*List the key libraries, languages, components used by the MVP.*
+To build our frontend, we used Kotlin and leveraged Android Jetpack Compose for UI development. We also used Material3 for design components.
 
-Languages: Kotlin, Android Jetpack Compose, Material3
+Within our app, we have the following essential screens:
 
-*If applicable, describe essential screens.*
-
-Login Screen: Users can log in to their account.
-Home Screen: Users can view their daily calorie intake and track their meals.
-Meal Creation Screens: Users can create a meal by taking a picture or manually inputting the meal.
-Post Creation Screen: Users can share their meals with friends.
-Recap Screen: Users can view a recap of their daily calorie intake.
-Graph Screen: Users can view a graph of their calorie consumption over time.
-Map Screen: Users can view nearby friends and their meals.
+1. Login Screen: Users can log in to their account.
+2. Home Screen: Users can view their daily calorie intake and track their meals.
+3. Meal Creation Screens: Users can create a meal by taking a picture or manually inputting the meal.
+4. Post Creation Screen: Users can share their meals with friends.
+5. Recap Screen: Users can view a recap of their daily calorie intake.
+6. Graph Screen: Users can view a graph of their calorie consumption over time.
+7. Map Screen: Users can view nearby friends and their meals.
+8. Recipe Suggestions Screen: Users can view recipe suggestions based on selected ingredients.
 
 ## Backend
 
-*Decompose the MVP into functional blocks.*
+<!-- *Decompose the MVP into functional blocks.* -->
+
+1. Authentication
+    - Firebase Auth: Manage user authentication, including sign-up, login, and password management.
+2. Remote Database Management
+    - Firestore: Store user data, meal entries, and posts.
+3. Dependency Injection
+    - Hilt: Manage dependencies and provide objects to classes.
+4. Local Database Management
+    - Room: Cache data locally for offline access.
+5. Image Recognition
+    - Spoonacular API: Recognize ingredients in images and provide nutritional information.
+    - For the MVP, plan to move to an in-house solution for higher accuracy.
 
 - Hilt, Room, Dagger, JaCoCo, SonarQube, JUnit, Mockito, Espresso, Firestore, Firebase Auth
 
-
-
 ## Data Model
 
-*What data are you collecting / managing?*
+<!-- *What data are you collecting / managing?* -->
 
-- User Data: User information, preferences, and settings.
-- Meal Data: Meal information, ingredients, and calorie content.
-- Post Data: Shared posts, their content, and associated meals.
+- User Data:
+    - Display/First/Last Name
+    - DOB
+    - Email
+    - Preferences & Info
+        - Dietary Restrictions
+        - Calorie Goals
+        - Weight
+        - Height
+- Meal Data:
+    - Name
+    - Occasion (Breakfast, Lunch, Dinner, Snack)
+    - Tags (Vegan, Vegetarian, etc.)
+    - Ingredients
+        - Nutritional Information
+- Post Data:
+    - Meal to be shared
+    - Location
+    - Description
+    - Pictures
+    - User who posted
 
-*How is it organised?*
 
-All data is stored in a NoSQL database, with separate collections for users (and their meals) and for posts.
+### How it is stored
 
-*Where is it stored?*
+All data is stored in a NoSQL database. We have a collection for users, which contains their meals.
 
-Firebase Firestore
+For posts, we have a second collection that contains all post data.
 
-*How is it shared/copied/cached?*
+### Where is it stored
 
-Data is shared between the frontend and backend using Firebase's `FirebaseFirestore` class. Data is cached locally using Room, in a SQL database for offline access.
+Our app data is stored in Firebase Firestore. For static data, we use Firebase Storage.
 
-## Security Considerations
+### How is it accessed
 
-## Infrastructure and Deployment
+Data is shared between the frontend and backend using Firebase's `FirebaseFirestore` class. Data is cached locally using Room, a SQL database for offline access.
 
-*How is the application developed, tested and deployed?*
+<!-- *How is the application developed, tested and deployed?* -->
 
-The application is developed using Android Studio and tested using JUnit, Mockito, and Espresso. The application is not yet deployed.
+## Testing
 
-*Any special infrastructure requirements.*
+We use JUnit and Mockito for unit testing and Espresso for UI testing. We also use JaCoCo for code coverage and SonarQube for static code analysis.
 
-No
+## Deployment
 
-## Test Plan
-
-*How is the application developed, tested and deployed?*
-
-*Any special infrastructure requirements.*
-
+Our app will be deployed through the Google Play Store. Our backend is hosted on Firebase already. We have no special infrastructure requirements. One step we will need before the MVP is a separate development and production environment.
