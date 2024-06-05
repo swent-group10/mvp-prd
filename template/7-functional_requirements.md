@@ -124,10 +124,9 @@ Allowing users to access their data across multiple devices enhances convenience
 - Ensure that the user experience is seamless when switching between devices, meaning the user should be able to start a session on one device and continue on another without losing data or functionality.
 
 ## Architectural Diagram
-
-![Architecture Diagram](Architecture.png)
-
-
+<p align="center">
+<img src="Architecture.png" alt=architecture width="80%">
+</p>
 
 *Describe key internal functionality.*
 
