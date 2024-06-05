@@ -1,93 +1,120 @@
 # Non-Functional Requirements
 
-## Security, privacy, and data retention policies
+## Security, Privacy, and Data Retention Policies
 
-
-As this application collects and stores Personally Identifiable Information (PII) linked to users' Google accounts, such as their email address, full name, and more sensitive data like their location (when they choose to share it in their posts), it is subject to the General Data Protection Regulation (GDPR). This is because the app operates within the European Union (EU) and will be used by EU residents. The mechanisms built and used in the application need to be understood through this article.
-
+As this application collects and stores Personally Identifiable Information (PII) linked to users' Google accounts, including their email address, full name, and more sensitive data such as their location (should the user opt to include it in their posts), it is subject to the General Data Protection Regulation (GDPR). This is due to the app being designed for operation within the European Union (EU) and its usage by EU residents. The mechanisms built and used in the application must be understood through the lenses of this regulation.
 
 ### Privacy
 
+#### Firebase Authentication
 
+To streamline the login process and ensure compliance with EU regulations, the authentication system employs Firebase Authentication with Google accounts. As a consequence of this service being used, passwords, email addresses, phone numbers, user agents, and IP addresses are collected and stored on the Firebase Cloud. Information linked to the user's account is deleted when the account is deleted, while the IP address is retained for 180 days. In accordance with Article 17 of the GDPR ("Right to erasure"), users can delete their accounts within the application, initiating the automatic deletion of data stored by the Firebase Authentication mechanism.
 
-#### Firebase Authentification
- 
-To avoid the hassle of implementing a custom login framework and to comply with EU regulations, the authentication system uses Firebase Authentication with Google accounts, which is GDPR compliant. Due to the usage of this service, passwords, email addresses, phone numbers, user agents, and IP addresses are collected. Information linked to the user's account is deleted when the account is deleted. The IP address is retained for a period of 180 days. To comply with Article 17 of the GDPR ("Right to erasure"), users have the option to delete their accounts, which triggers the automatic deletion of data stored by the Firebase Authentication mechanism.
+#### Firebase Databases (Database, Storage, and Geolocation)
 
-
-#### Firebase Databases (database, storage, and geolocation)
-The application uses three databases: one for information, one for images, and one for geolocation. All connections to the databases are sent using HTTPS and are isolated from other customers' data. Additionally, all data is encrypted at rest to provide maximum protection. ensuring that data is always processed and retained in secure cloud environments.
+The application employs three databases: one for information, one for images, and one for geolocation. All database connections are transmitted via HTTPS, ensuring they remain isolated from other customers' data. Furthermore, all data is encrypted at rest, guaranteeing it is always processed and stored in secure cloud environments.
 
 #### Data Segregation
 
-Separate tables are maintained for user personal information and application-related data to enhance data segregation and security. The two sets of data are linked using a user ID. This approach ensures that sensitive user data and operational data are compartmentalized, reducing the risk of unauthorized access and simplifying data management. The personnal information will be stored on a server controlled by us and the operational data will be stored on a server controlled by Firebase. Giving us more data segmentation to reduce the risk of exposing sensitive information in case of a data breach.
-
+Separate tables are maintained for personal user information and application-related data to improve data separation and security. The two sets of data are linked by a randomly generated user ID. This approach ensures that sensitive user data and operational data are separated, reducing the risk of unauthorized access and simplifying data management. Personal information is stored on a server controlled by us, while operational data is stored on a server controlled by Firebase. This segmentation reduces the risk of exposing sensitive information in a data breach.
 
 #### APIs
 
-The first version of the application depended on two APIs for its functionality: Spoonacular for anything related to food recognition and Open Food Facts for information about a product given a barcode. Using the Spoonacular API required sending an image, which was stripped of all its metadata, to their server. To have better control over the granularity of the use of the picture (e.g., the picture sent could be used to fine-tune their model) and to have a better grasp of the retention duration, both APIs are implemented in-house.
-
+The first version of the application relied on two APIs for its functionality: Spoonacular for food recognition and Open Food Facts for barcode-related product information. Using the Spoonacular API required sending an image stripped of all metadata to their server. To better control image use and retention time, both APIs are implemented in-house. This change enhances security and customization tailored to the application's specific needs.
 
 #### Data Retention
 
+Data is retained for as long as the user has an account. When a user deletes their account, all data associated with that account is deleted. To comply with GDPR, the application retains data for 180 days after the account is deleted. During this period, the data is stored in a secure, encrypted state and is only accessible for compliance purposes. After this period, the data is permanently deleted from the Firebase servers and the server that stores the personal data.
 
-The application retains user data for as long as the user has an account. When a user deletes their account, all data linked to that account is deleted. The application retains data for a period of 180 days after the account is deleted to comply with the GDPR. During this period, the data is kept in a secure, encrypted state and is only accessible for regulatory compliance purposes. After which the data is permanently deleted from the firebase servers and the sever storing the personal information.
-
-Additionnaly due to the sensitive  nature of the post data (which can inclue the location where the post was made) the post data is only kept for 30 days after the post was made. 
+Additionally, due to the sensitive nature of the posting information (which may include the location where the posting was made), the posting information is only retained for 30 days after the posting is made.
 
 ## Data Protection and Information Security Policies
 
 ### Appointment of a Data Protection Officer
 
-To ensure compliance with GDPR and to oversee data protection strategies, we will appoint a Data Protection Officer (DPO). The DPO will be responsible for monitoring compliance, managing data protection activities, advising on data protection impact assessments, and acting as a point of contact for data subjects and supervisory authorities. They will be responsibel for creating documentation explaining the reasons for collecting and processing personal information, detailing the types of information held, specifying the retention periods, and describing the technical security measures implemented. Even if this is onyl required by Article 30 of the GDPR for companies o fmore the 250 employees, we believe this demosntrates our commitment to data protection and privacy.
+To ensure compliance with the GDPR and oversee our data protection strategy, we will appoint a Data Protection Officer (DPO). The DPO will be responsible for monitoring compliance, managing data protection activities, advising on data protection impact assessments, and acting as a point of contact for data subjects and supervisory authorities. The DPO will be responsible for creating documentation that explains the reasons for collecting and processing personal information, details the types of information held, specifies retention periods, and describes the technical security measures implemented. While this is only required by Article 30 of the GDPR for companies with more than 250 employees, we believe it demonstrates our commitment to data protection and privacy.
 
 ### Analytics Data Stripping
 
-All the data used for analytics will be the data from fireclouds. This ensures that any data collected for analytical purposes cannot be traced back to individual users as no PII is stored. By anonymizing this data, we can analyze usage patterns and improve the application without compromising user privacy.
+All data used for analytics is stored in the Firecloud. This ensures that data collected for analytics purposes cannot be traced back to individual users because no PII is stored. By anonymizing this data, we can analyze usage patterns and improve the application without compromising user privacy.
 
 ### Development of a Data Breach Response Plan
 
-We have developed a comprehensive data breach response plan to handle any potential security incidents effectively. This plan includes:
+We have developed a comprehensive data breach response plan to effectively manage any potential security incident. This plan includes:
+
 - Immediate containment and assessment of the breach to determine its scope and impact.
-- Notification procedures to inform affected users and relevant authorities promptly, as required by GDPR.
-- Measures to mitigate the effects of the breach and prevent future occurrences.
-- Detailed documentation of the breach and the response actions taken, to improve our security posture and compliance.
+- Notification procedures to promptly notify affected users and relevant authorities, as required by GDPR.
+- Measures to mitigate the impact of the breach and prevent future occurrences.
+- Detailed documentation of the breach and response actions taken to improve our security posture and compliance.
 
 By implementing these measures, we aim to maintain the highest level of data protection and ensure that our users' information is handled responsibly and securely.
 
+## Adoptions, Scalability, and Availability
 
-## Adoptions, Scalability and Availability
+### Adoption
 
-### Adoption:
+#### User Acquisition Strategy
 
-This refers to how your app will attract and retain users. You should outline strategies for user acquisition, onboarding, and retention. You might also discuss how you plan to measure user engagement and satisfaction.
+- **Freemium Model**: Implement a freemium model to attract a broad user base, allowing them to use basic features for free while offering premium features for a subscription fee. This approach lowers the barrier to entry and encourages users to upgrade for additional benefits. The model is structured as follows:
+  - **Basic Plan**: Free access to basic features such as meal tracking, recipe search, and community contributions.
+  - **Premium Plan**: Paid subscription offering advanced features such as meal recognition from a picture, personalized meal recommendations, and exclusive content.
 
-### Scalability:
+- **Marketing Strategies**: Multi-frontal marketing strategies will be used to attract users to the application. These include social media campaigns, influencer partnerships, email marketing, and search engine optimization (SEO) to increase app visibility and user engagement.
 
-The most significant bursts of traffic are anticipated during key meal times (breakfast, lunch, and dinner). Additionally, a general increase in traffic is expected around the New Year, as people are more likely to start dieting during this period.
+#### User Onboarding
 
-#### Scalability Criteria:
+- Provide a seamless onboarding experience with step-by-step tutorials to familiarize users with the app's features. This includes walkthroughs, video tutorials, and a FAQ section.
+
+#### User Retention
+
+- **Push Notifications**: Implement personalized push notifications to remind users to log their meals, encourage them with their chosen goals (daily intakes), and notify them of new features or updates.
+- **Personalized Recommendations**: Leverage machine learning algorithms to provide personalized meal recommendations based on users' dietary preferences, health goals, and past meal history.
+- **New Features**: Regularly introduce new features and updates to keep users engaged and encourage them to continue exploring the app.
+
+### Scalability Criteria
 
 1. **Load Handling Capacity**:
-    - The system should be capable of handling a 200% increase in traffic during peak meal times.
-    - The application must support at least 10,000 concurrent users without performance degradation.
+   - The system should be able to handle a 200% increase in traffic during peak meal times.
+   - The application must support at least 10,000 concurrent users without performance degradation.
 
 2. **Performance Metrics**:
-    - Response time should not exceed 2 seconds for 95% of requests during peak times.
-    - Server CPU usage should remain below 70% during high traffic periods.
+   - Response time should not exceed 2 seconds for 95% of requests during peak hours.
+   - Server CPU utilization should remain below 70% during peak traffic periods.
 
-3. **Auto-Scaling**:
-    - Implement auto-scaling policies to dynamically allocate resources based on real-time traffic.
-    - Ensure that auto-scaling triggers when traffic increases by 30% within a 5-minute window.
+3. **Auto Scaling**:
+   - Implement auto-scaling policies to dynamically allocate resources based on real-time traffic.
+   - Ensure that auto-scaling is triggered when traffic increases by 30% within a 5-minute window.
 
-By adhering to these criteria, the application can effectively manage scalability challenges and ensure a smooth user experience during periods of high traffic.
+### Availability
 
+#### System Resilience
 
+1. **Redundancy and Backups**:
+   - Implement redundant server architectures to eliminate single points of failure.
+   - Perform hourly incremental backups and daily full backups of all critical data.
 
-### Availability:
+2. **Geographical Distribution**:
+   - Utilize multiple data centers in different geographical locations to ensure service continuity in case of localized disruptions.
+   - Implement automated failover mechanisms to switch to backup data centers in case of primary data center failure.
+   - Regularly test and validate the failover processes to ensure seamless transition during actual incidents.
 
-This refers to your app's uptime. You should discuss how you plan to ensure that your app is always available to users. This might include details about your app's redundancy, backup, and disaster recovery strategies.
+#### Data Protection
 
-all available besides thse
+1. **Regular Backups**:
+   - Schedule daily backups of all vital data with retention periods aligned with business continuity requirements.
+   - Store backups in multiple secure locations, including off-site storage facilities.
+   - Implement encryption for both in-transit and at-rest backup data to prevent unauthorized access.
 
-- *What kind of traffic patterns do you expect to see?*
+2. **Encryption and Security**:
+   - Use advanced encryption standards (AES-256) for data at rest.
+   - Regularly update encryption keys and rotate them according to industry best practices.
+
+#### Recovery Strategy
+
+1. **Disaster Recovery Plan**:
+   - Develop a detailed disaster recovery plan outlining steps for service restoration, including system reconfiguration and data recovery procedures.
+   - Ensure the disaster recovery plan includes roles and responsibilities, communication protocols, and escalation procedures.
+
+2. **Routine Testing**:
+   - Conduct bi-annual disaster recovery drills to simulate various failure scenarios and test the effectiveness of the recovery plan.
+   - Review and update the disaster recovery plan based on drill outcomes and changes in the infrastructure.
