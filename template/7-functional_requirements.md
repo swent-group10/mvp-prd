@@ -14,13 +14,13 @@ To provide a seamless and secure user experience, the app must support user regi
 
 ### 2. Core Functionality
 
-#### Camera-Based Food Recognition
+#### Scan with Camera
 
 **Motivation**
 The ability to scan food items using the camera is essential for determining the composition of the food, which is the primary function of the app. This feature allows users to quickly and easily get nutritional information without manually entering data.
 
 **Proposed Solution**
-- Integrate our in-house barcode and image recognition API to enable the camera to scan and identify food items.
+- Integrate an image recognition API (Spoonacular) to enable the camera to scan and identify food items.
 - Use the MealViewModel to handle the initialization and updates of meal data from camera scans.
 - Store the results in the local database and synchronize with Firebase.
 
@@ -50,7 +50,8 @@ Users need to visualize their consumption patterns and progress towards their nu
 Allowing users to scan barcodes of final products provides a quick and efficient way to get detailed nutritional information, saving time and effort.
 
 **Proposed Solution**
-- Use our barcode scanning API to read product barcodes.
+- Use a barcode scanning API to read product barcodes and get product ID.
+- Use a food database API (OpenFoodFacts) to retrieve product's nutritional information.
 - Use the BarcodeViewModel to handle barcode scans and display nutritional information.
 
 #### Recipe Recommendations
@@ -59,7 +60,7 @@ Allowing users to scan barcodes of final products provides a quick and efficient
 Based on the user’s scanned items and dietary preferences, suggesting recipes helps users make better food choices and utilize available ingredients effectively.
 
 **Proposed Solution**
-- Develop an algorithm to match scanned items with potential recipes.
+- Use a recipe API (Spoonacular) to fetch recipes based on a food item.
 - Integrate a recipe database for filtering based on user preferences and available ingredients.
 - Provide step-by-step instructions and nutritional information for suggested recipes.
 
@@ -69,18 +70,17 @@ Based on the user’s scanned items and dietary preferences, suggesting recipes 
 Providing detailed nutritional information for scanned items is essential for users to understand their dietary intake and make informed choices.
 
 **Proposed Solution**
-- Retrieve and display macronutrient and micronutrient information from our in-house API.
+- Retrieve and display macronutrient and micronutrient information from the APIs.
 - Allow users to view detailed breakdowns of their daily, weekly, and monthly intake.
 - Use a standardized nutritional database to ensure accuracy and consistency.
 
 #### Create and Share Posts
 
 **Motivation**
-Creating and sharing posts allows users to interact with the community, share experiences, and gain insights from others. This feature can enhance user engagement.
+Creating and sharing posts allows users to interact with the community, share experiences. This feature can enhance user engagement.
 
 **Proposed Solution**
 - Develop a social feature that allows users to create posts with text, images, and location tags using the CreatePostViewModel.
-- Implement privacy controls to let users manage who can see their posts.
 - Use Firebase for post storage and retrieval, handled by the PostRepository.
 
 #### View Posts within a Radius
@@ -89,7 +89,7 @@ Creating and sharing posts allows users to interact with the community, share ex
 Viewing posts within a specific radius helps users connect with others nearby, fostering a sense of community and local support.
 
 **Proposed Solution**
-- Implement location-based filtering to show posts from users within a specified radius using the MapViewModel.
+- Implement location-based filtering (Geofire) to show posts from users within a specified radius using the MapViewModel.
 - Use geolocation services to determine user locations and calculate distances.
 - Ensure user privacy by allowing location sharing only with explicit consent.
 
@@ -127,3 +127,52 @@ Allowing users to access their data across multiple devices enhances convenience
 <p align="center">
   <img src="Architecture.png" alt="architecture" width="80%">
 </p>
+
+### Key Internal Functionality
+
+**Overview**
+
+The internal functionality of the app is divided into three main layers: UI, Domain, and Data. The app integrates with various third-party APIs and services to provide comprehensive food tracking and nutritional analysis features. The Firebase platform is used for user authentication and data synchronization.
+
+#### ViewModels
+
+**Motivation**
+ViewModels are used to manage the UI-related data in a lifecycle-conscious way. This allows data to survive configuration changes such as screen rotations.
+
+**Implementation**
+- **OverviewViewModel**: Uses data about meals and user preferences to display graphs and information about the current day.
+- **GraphViewModel**: Fetches data from the meal repository and formats it for display in graphs.
+- **MealViewModel**: Initializes meal data from camera scans or manual entry and handles changes to meal data.
+- **DailyRecapViewModel**: Initializes with meals from the current day and fetches new data when the date is changed.
+- **BarcodeViewModel**: Handles the scanning of barcodes and retrieves nutritional information.
+- **CreatePostViewModel**: Manages data for creating posts, including location data, and uploads posts to Firebase.
+- **MapViewModel**: Manages the fetching and displaying of posts within a specified radius.
+
+#### Repositories
+
+**Motivation**
+Repositories handle data operations. They provide a clean API for data access to the rest of the application, abstracting the source of data (local database, network, etc.).
+
+**Implementation**
+- **MealRepository**: Manages meal data from both local storage and Firebase. It queries local data first and syncs with Firebase if data is missing.
+- **PostRepository**: Manages the retrieval and storage of posts, handling data from both Firebase and local storage.
+
+#### Data Management
+
+**Motivation**
+Efficient data management ensures quick access, synchronization across devices, and offline capabilities.
+
+**Implementation**
+- **LocalDB**: Stores user data, meal data, barcode information, and post data locally using Room.
+- **Firebase**: Used for user authentication, cloud storage, and data synchronization. Services include Firebase Authentication, Firestore, and Firebase Storage.
+- **GeoFire**: A Firebase library used for geolocation queries to manage and query location data for posts.
+
+#### External APIs
+
+**Motivation**
+Integrating external APIs allows the app to provide detailed nutritional information, recipe suggestions, and barcode data.
+
+**Implementation**
+- **Spoonacular API**: Used for recipe suggestions, image analysis, and nutritional information.
+- **OpenFoodFacts API**: Used for retrieving barcode information and food composition data.
+
