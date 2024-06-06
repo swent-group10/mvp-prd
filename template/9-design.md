@@ -2,7 +2,7 @@
 
 ## Frontend
 
-To build our frontend, we used Kotlin and leveraged Android Jetpack Compose for UI development. We also used Material3 for design components.
+To build our frontend, we employed Kotlin and leveraged Android Jetpack Compose for UI development. Additionally, we utilized Material3 for design components.
 
 Within our app, we have the following essential screens:
 
@@ -13,7 +13,7 @@ Within our app, we have the following essential screens:
 5. Recap Screen: Users can view a recap of their daily calorie intake.
 6. Graph Screen: Users can view a graph of their calorie consumption over time.
 7. Map Screen: Users can view nearby friends and their meals.
-8. Recipe Suggestions Screen: Users can view recipe suggestions based on selected ingredients.
+8. Recipe Suggestions Screen: Users can view recipe suggestions based on selected/scanned ingredients.
 
 ## Backend
 
@@ -31,7 +31,7 @@ Within our app, we have the following essential screens:
     - Spoonacular API: Recognize ingredients in images and provide nutritional information.
     - For the MVP, plan to move to an in-house solution for higher accuracy.
 
-- Hilt, Room, Dagger, JaCoCo, SonarQube, JUnit, Mockito, Espresso, Firestore, Firebase Auth
+- Hilt, Room, Dagger, JaCoCo, SonarQube, JUnit, Mockito, Espresso, Firestore, Firebase Authentication
 
 ## Data Model
 
@@ -40,6 +40,7 @@ Within our app, we have the following essential screens:
 - User Data:
     - Display/First/Last Name
     - DOB
+    - User ID
     - Email
     - Preferences & Info
         - Dietary Restrictions
@@ -57,7 +58,15 @@ Within our app, we have the following essential screens:
     - Location
     - Description
     - Pictures
-    - User who posted
+    - User ID of the user who posted it
+- Recipe Data:
+    - Title
+    - Occasion (Breakfast, Lunch, Dinner, Snack)
+    - Tags (Vegan, Vegetarian, etc.)
+    - Ingredients
+        - Nutritional Information
+    - Instructions
+    - Pictures
 
 
 ### How it is stored
@@ -82,4 +91,9 @@ We use JUnit and Mockito for unit testing and Espresso for UI testing. We also u
 
 ## Deployment
 
-Our app will be deployed through the Google Play Store. Our backend is hosted on Firebase already. We have no special infrastructure requirements. One step we will need before the MVP is a separate development and production environment.
+Our app will be deployed through the Google Play Store. Personal user data will be stored on our server to ensure enhanced security and privacy. Other data, such as meal entries and posts, will be stored in Firebase Firestore, while static data will be managed using Firebase Storage. Our server will be deployed and maintained to handle personal user data securely. We will establish separate development and production environments to facilitate testing and ensure smooth transitions before the MVP launch.
+
+
+
+
+

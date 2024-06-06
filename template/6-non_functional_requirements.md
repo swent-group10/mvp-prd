@@ -8,7 +8,7 @@ As this application collects and stores Personally Identifiable Information (PII
 
 #### Firebase Authentication
 
-To streamline the login process and ensure compliance with EU regulations, the authentication system employs Firebase Authentication with Google accounts. As a consequence of this service being used, passwords, email addresses, phone numbers, user agents, and IP addresses are collected and stored on the Firebase Cloud. Information linked to the user's account is deleted when the account is deleted, while the IP address is retained for 180 days. In accordance with Article 17 of the GDPR ("Right to erasure"), users can delete their accounts within the application, initiating the automatic deletion of data stored by the Firebase Authentication mechanism.
+To streamline the login process and ensure compliance with EU regulations, the authentication system employs Firebase Authentication with Google accounts. As a consequence of this service being used, passwords, email addresses, phone numbers, user agents, and IP addresses are collected and stored on the Firebase Cloud. Information linked to the user's account is deleted when the account is deleted, while the IP address is retained for 180 days. To be in accordance with Article 17 of the GDPR ("Right to erasure"), users can delete their accounts within the application, initiating the automatic deletion of data stored by the Firebase Authentication mechanism.
 
 #### Firebase Databases (Database, Storage, and Geolocation)
 
@@ -20,13 +20,13 @@ Separate tables are maintained for personal user information and application-rel
 
 #### APIs
 
-The first version of the application relied on two APIs for its functionality: Spoonacular for food recognition and Open Food Facts for barcode-related product information. Using the Spoonacular API required sending an image stripped of all metadata to their server. To better control image use and retention time, both APIs are implemented in-house. This change enhances security and customization tailored to the application's specific needs.
+The PoC relied on two APIs for its functionality: Spoonacular for food recognition and Open Food Facts for barcode-related product information. Using the Spoonacular API required sending an image stripped of all metadata to their server, which could later be used to fine-tune their model. To better control image use and retention time, both APIs have been implemented in-house. This change enhances security and allows for customization tailored to the application's specific needs.
 
 #### Data Retention
 
 Data is retained for as long as the user has an account. When a user deletes their account, all data associated with that account is deleted. To comply with GDPR, the application retains data for 180 days after the account is deleted. During this period, the data is stored in a secure, encrypted state and is only accessible for compliance purposes. After this period, the data is permanently deleted from the Firebase servers and the server that stores the personal data.
 
-Additionally, due to the sensitive nature of the posting information (which may include the location where the posting was made), the posting information is only retained for 30 days after the posting is made.
+Additionally, due to the sensitive nature of posts from the social media feature (which may include the location where the post was made), the information is only retained for 30 days after the post is made.
 
 ## Data Protection and Information Security Policies
 
@@ -36,7 +36,7 @@ To ensure compliance with the GDPR and oversee our data protection strategy, we 
 
 ### Analytics Data Stripping
 
-All data used for analytics is stored in the Firecloud. This ensures that data collected for analytics purposes cannot be traced back to individual users because no PII is stored. By anonymizing this data, we can analyze usage patterns and improve the application without compromising user privacy.
+All data used for analytics is stored in the Firecloud. This ensures that data collected for analytics purposes cannot be traced back to individual user as no PII is stored. By anonymizing this data, we can analyze usage patterns and improve the application without compromising user privacy.
 
 ### Development of a Data Breach Response Plan
 
@@ -55,7 +55,7 @@ By implementing these measures, we aim to maintain the highest level of data pro
 
 #### User Acquisition Strategy
 
-- **Freemium Model**: Implement a freemium model to attract a broad user base, allowing them to use basic features for free while offering premium features for a subscription fee. This approach lowers the barrier to entry and encourages users to upgrade for additional benefits. The model is structured as follows:
+- **Freemium Model**: Implement a freemium model to attract a broad user base, allowing them to try basic features for free while offering premium features for a subscription fee. This approach lowers the barrier to entry and encourages users to upgrade for additional benefits. The model is structured as follows:
   - **Basic Plan**: Free access to basic features such as meal tracking, recipe search, and community contributions.
   - **Premium Plan**: Paid subscription offering advanced features such as meal recognition from a picture, personalized meal recommendations, and exclusive content.
 
@@ -75,7 +75,7 @@ By implementing these measures, we aim to maintain the highest level of data pro
 
 1. **Load Handling Capacity**:
    - The system should be able to handle a 200% increase in traffic during peak meal times.
-   - The application must support at least 10,000 concurrent users without performance degradation.
+   - The application must support at least 15,000 concurrent users without performance degradation.
 
 2. **Performance Metrics**:
    - Response time should not exceed 2 seconds for 95% of requests during peak hours.
