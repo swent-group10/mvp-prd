@@ -32,7 +32,7 @@ Swapping the Spoonacular API with our own food recognition AI model.
 | :---------------: | :--------: | :---------: |
 |Week 1 | Setup and Data Gathering | Acquring a large set of qualitative data for training purposes|
 |Week 2 | Preprocessing the Data | Cropping and modifying the data to have the optimal format before usage|
-|Week 3 | Choosing and Training model| Selecting a model (e.g CNN) and training it, fine tuning the hyperparameters as we go|
+|Week 3 | Choosing and Training model| Selecting a model (e.g DnCNN) and training it, fine tuning the hyperparameters as we go|
 |Week 4 | Evaluating and Deploying the Model | Split data into test and validation and measure performance, then deploy the model to the used cloud service |
 
 

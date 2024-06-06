@@ -1,6 +1,5 @@
 # Overview
 
-*Maximum: 2 pages*
 
 <!-- *What is this project about?* -->
 ## Project Overview
