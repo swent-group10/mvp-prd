@@ -137,6 +137,7 @@ The internal functionality of the app is divided into three main layers: UI, Dom
 #### ViewModels
 
 **Motivation**
+
 ViewModels are used to manage the UI-related data in a lifecycle-conscious way. This allows data to survive configuration changes such as screen rotations.
 
 **Implementation**
@@ -151,6 +152,7 @@ ViewModels are used to manage the UI-related data in a lifecycle-conscious way. 
 #### Repositories
 
 **Motivation**
+
 Repositories handle data operations. They provide a clean API for data access to the rest of the application, abstracting the source of data (local database, network, etc.).
 
 **Implementation**
@@ -160,6 +162,7 @@ Repositories handle data operations. They provide a clean API for data access to
 #### Data Management
 
 **Motivation**
+
 Efficient data management ensures quick access, synchronization across devices, and offline capabilities.
 
 **Implementation**
@@ -170,6 +173,7 @@ Efficient data management ensures quick access, synchronization across devices, 
 #### External APIs
 
 **Motivation**
+
 Integrating external APIs allows the app to provide detailed nutritional information, recipe suggestions, and barcode data.
 
 **Implementation**
