@@ -86,6 +86,8 @@ In our predictions the, primary cost of development for our product will be the 
 
 For safe storage we will need capital to acquire a NAS to use as our main physical storage server and we'll also subscribe to a cold storage service (e.g Amazon Glacier S3) for redundancy to store a copy of our server that could be access if a problem arises with the NAS. The amount of cold storage used will be at 10 TB.
 
+<div align="center">
+
 | Item | Cost/Unit | Units | Total |
 | :--: | :-------: | :---: | :---: |
 | NAS | 200-600 CHF | 1 | 200 - 600 CHF |
@@ -94,6 +96,7 @@ For safe storage we will need capital to acquire a NAS to use as our main physic
 | Amazon Glacier S3 | 3500 CHF + 40CHF/Month | 1 | 3500CHF + 40CHF/Month |
 | **TOTAL** | - | - | 3700-4100CHF + 40CHF/Month | 
 
+</div>
 ## Maintenance and Upkeep
 
 We will need to constantly monitor our AI Model to analyze its performance but also take advantage of tha data from the users to be able to improve our model. We will also need to periodically update the Database created for storing Barcodes and information about food products to expand it and keep it up-to-date. 
