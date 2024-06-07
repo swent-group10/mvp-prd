@@ -22,7 +22,7 @@ The V1 Proof of Concept (PoC) for Polyfit, as planned by Sprint 10, focused on c
 
 From the development and deployment of the V1 PoC, several key insights were gained:
 
-- Image Analysis Challenges: Using image recognition to detect quantities and weights of food items was more complex than anticipated, requiring further refinement. Additionally, the classification of food items by the model used was restricted to a limited set of predefined categories, which limited the app's flexibility and usefulness to the user.
+- Image Analysis Challenges: Using image recognition to detect quantities and weights of food items was more complex than anticipated, requiring further refinement. Additionally, the classification of food items by the model used was restricted to a limited set of predefined categories, which limited the app's usefulness to the user.
 - Intentionality of code: The importance of writing clean, well-documented code was highlighted to ensure scalability and maintainability.
 - Usability: The importance of a user-friendly interface and smooth navigation was underscored by testing/grading feedback.
 

@@ -12,11 +12,12 @@ To streamline the login process and ensure compliance with EU regulations, the a
 
 #### Firebase Databases (Database, Storage, and Geolocation)
 
-The application employs three databases: one for information, one for images, and one for geolocation. All database connections are transmitted via HTTPS, ensuring they remain isolated from other customers' data. Furthermore, all data is encrypted at rest, guaranteeing it is always processed and stored in secure cloud environments.
+The application employs three databases: one for information, one for images, and one for geolocation. All database connections are transmitted via HTTPS, ensuring their security. Each customer's data is isolated from others, maintaining privacy and security. Additionally, all data is encrypted at rest, guaranteeing secure processing and storage in cloud environments.
 
 #### Data Segregation
 
-Separate tables are maintained for personal user information and application-related data to improve data separation and security. The two sets of data are linked by a randomly generated user ID. This approach ensures that sensitive user data and operational data are separated, reducing the risk of unauthorized access and simplifying data management. Personal information is stored on a server controlled by us, while operational data is stored on a server controlled by Firebase. This segmentation reduces the risk of exposing sensitive information in a data breach.
+Separate tables are maintained for user information (such as name, age, and weight) and application-related data to enhance data separation and security. The two sets of data are linked by a randomly generated user ID. This approach ensures that sensitive user data and operational data are separated, reducing the risk of unauthorized access and simplifying data management. Personal information is stored on a server controlled by us, while operational data is stored on a server controlled by Firebase. This segmentation minimizes the risk of exposing sensitive information in a data breach.
+
 
 #### APIs
 

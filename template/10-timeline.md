@@ -2,7 +2,7 @@
 
 ## Execution Roadmap
 
-We plan to implement the MVP deployment over a period of 14 weeks. This process will include the setup, development, testing, rollout, integration of added components to the app, and refactoring of the current project. We will be setting up multiple intermediate milestones to get an assessment of the current progress and be able to identify and solve potential issues that arise.
+We plan to implement the MVP deployment over a period of 18 weeks. This process will include the setup, development, testing, rollout, integration of added components to the app, and refactoring of the current project. We will be setting up multiple intermediate milestones to get an assessment of the current progress and be able to identify and solve potential issues that arise.
 
 
 
@@ -55,7 +55,19 @@ Transitioning from the OpenFoodFacts API to our own.
 |Week 2| Setting Up Database | Using the gathered data, create a database in the used cloud service that will hold the barcode and information about the specific food item|
 |Week 3| Integration | Integrate the use of the database to replace the OpenFoodFacts API|
 
-### Milestone 4 : Deployment
+### Milestone 4: Health App Integration
+
+- Implement seamless integration with popular health apps to sync user data.
+- Allow users to view their health data within the app.
+- Provide personalized insights and recommendations based on the aggregated health data.
+
+|Sprint/Week number | Objective  | Outcomes    |
+| :---------------: | :--------: | :---------: |
+|Week 1 | Research and Planning | Identify popular health apps for integration and outline integration requirements |
+|Week 2 | Initial Development | Begin development of integration features, focusing on data syncing |
+|Week 3 | Continue Development | Extend integration to include viewing health data within the app |
+|Week 4 | Testing and Feedback | Conduct testing to ensure seamless integration and gather user feedback |
+### Milestone 5 : Deployment
 Release version of the app for alpha testers
 
 |Sprint/Week number | Objective  | Outcomes    |

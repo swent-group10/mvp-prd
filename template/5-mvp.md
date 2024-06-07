@@ -2,7 +2,7 @@
 
 ## Personas and Scenarios
 
-The primary target audience for our app is health-conscious individuals who enjoy monitoring their wellness.
+The primary target audience for our app is health-conscious individuals.
 
 
 ### Other Target Personas
@@ -12,7 +12,6 @@ The primary target audience for our app is health-conscious individuals who enjo
 - Cooking enthusiasts eager to explore new recipes
 - Athletes looking to improve their nutrition
 - Busy professionals seeking convenient meal tracking
-- Vegans and vegetarians searching for plant-based meal options
 
 
 <!-- *High-level scenarios to adopt, use and share the product.* -->
@@ -35,7 +34,7 @@ In order to grow our user base, our goal is to get the app in front of as many p
 2. **Healthy Meal Inspiration:** As a person on a diet, I want to search for recipes based on my dietary preferences to discover new, healthy meal options.
 3. **Barcode Scanning:** As a busy professional, I want to scan the barcode of a product to quickly access its nutritional information without manual entry.
 4. **Data Charts:** As a data-driven individual, I want to view charts of my daily calorie intake over time to track my progress and make informed dietary decisions.
-5. **Social Sharing:** As a social influencer, I want to share my meals with others to showcase my healthy lifestyle and gain inspiration from their posts.
+5. **Social Sharing:** As a health-conscious individual, I want to share my meals with others to showcase my healthy lifestyle and gain inspiration from their posts.
 
 
 
@@ -43,7 +42,7 @@ In order to grow our user base, our goal is to get the app in front of as many p
 
 The following are the key features required for the MVP and their importance:
 
-1. More flexible nutrient tracking (more than calories and macros)
+1. More flexible nutrient tracking (more than calories and macronutrients)
     - People who track their micronutrients will require a feature that accepts more detailed nutritional information when creating ingredients.
 2. Health app integration
     - People who are monitoring their weight will require a feature that integrates with health apps to monitor their weight and display progress. 

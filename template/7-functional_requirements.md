@@ -20,8 +20,7 @@ To provide a seamless and secure user experience, the app must support user regi
 The ability to scan food items using the camera is essential for determining the composition of the food, which is the primary function of the app. This feature allows users to quickly and easily get nutritional information without manually entering data.
 
 **Proposed Solution**
-- Integrate an image recognition API (Spoonacular) to enable the camera to scan and identify food items.
-- Use the MealViewModel to handle the initialization and updates of meal data from camera scans.
+- Integrate our in-house image recognition API to enable the camera to scan and identify food items.
 - Store the results in the local database and synchronize with Firebase.
 
 #### Track Nutritional Intakes
@@ -31,7 +30,6 @@ Logging food intake is crucial for users to track their diet and nutrition over 
 
 **Proposed Solution**
 - Develop a user-friendly interface for logging food intake, categorized by meal type (breakfast, lunch, dinner, snack).
-- Utilize the MealViewModel to initialize default values or use picture results.
 - Store the logged data locally and sync it with Firebase for access across devices.
 
 #### Visualizing Consumption Habits and Tracking Progress
@@ -41,7 +39,6 @@ Users need to visualize their consumption patterns and progress towards their nu
 
 **Proposed Solution**
 - Implement a dashboard that displays user data through various graphs and charts.
-- Use the GraphViewModel to get data from the MealRepository and format it for display.
 - Ensure the data is updated in real-time as users log their intake.
 
 #### Scanning Product Barcodes
@@ -51,8 +48,7 @@ Allowing users to scan barcodes of final products provides a quick and efficient
 
 **Proposed Solution**
 - Use a barcode scanning API to read product barcodes and get product ID.
-- Use a food database API (OpenFoodFacts) to retrieve product's nutritional information.
-- Use the BarcodeViewModel to handle barcode scans and display nutritional information.
+- Use our food database API to retrieve product's nutritional information.
 
 #### Recipe Recommendations
 
@@ -60,7 +56,7 @@ Allowing users to scan barcodes of final products provides a quick and efficient
 Based on the user’s scanned items and dietary preferences, suggesting recipes helps users make better food choices and utilize available ingredients effectively.
 
 **Proposed Solution**
-- Use a recipe API (Spoonacular) to fetch recipes based on a food item.
+- Use a recipe API (Spoonacular) to fetch recipes based on a list of ingredients.
 - Integrate a recipe database for filtering based on user preferences and available ingredients.
 - Provide step-by-step instructions and nutritional information for suggested recipes.
 
@@ -92,6 +88,17 @@ Viewing posts within a specific radius helps users connect with others nearby, f
 - Implement location-based filtering (Geofire) to show posts from users within a specified radius using the MapViewModel.
 - Use geolocation services to determine user locations and calculate distances.
 - Ensure user privacy by allowing location sharing only with explicit consent.
+
+
+#### Integration with Health Apps
+
+**Motivation**
+Integrating with health apps enables users to monitor their weight and other health metrics, providing a comprehensive view of their health and fitness journey. This integration enhances user experience by consolidating health data in one place, making it easier for users to track and manage their health goals.
+
+**Proposed Solution**
+- Implement seamless integration with popular health apps to sync user data, ensuring real-time updates and accuracy.
+- Allow users to view their health data within the app, offering a holistic view of their well-being and progress.
+
 
 ### 3. User Interface
 
