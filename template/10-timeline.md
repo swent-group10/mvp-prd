@@ -97,6 +97,7 @@ For safe storage we will need capital to acquire a NAS to use as our main physic
 | **TOTAL** | - | - | 3700-4100CHF + 40CHF/Month | 
 
 </div>
+
 ## Maintenance and Upkeep
 
 We will need to constantly monitor our AI Model to analyze its performance but also take advantage of tha data from the users to be able to improve our model. We will also need to periodically update the Database created for storing Barcodes and information about food products to expand it and keep it up-to-date. 
