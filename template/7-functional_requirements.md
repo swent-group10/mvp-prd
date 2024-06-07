@@ -76,7 +76,7 @@ Providing detailed nutritional information for scanned items is essential for us
 Creating and sharing posts allows users to interact with the community, share experiences. This feature can enhance user engagement.
 
 **Proposed Solution**
-- Develop a social feature that allows users to create posts with text, images, and location tags using the CreatePostViewModel.
+- Develop a social feature that allows users to create posts with text, images, and location tags.
 - Use Firebase for post storage and retrieval, handled by the PostRepository.
 
 #### View Posts within a Radius
@@ -85,7 +85,7 @@ Creating and sharing posts allows users to interact with the community, share ex
 Viewing posts within a specific radius helps users connect with others nearby, fostering a sense of community and local support.
 
 **Proposed Solution**
-- Implement location-based filtering (Geofire) to show posts from users within a specified radius using the MapViewModel.
+- Implement location-based filtering (Geofire) to show posts from users within a specified radius.
 - Use geolocation services to determine user locations and calculate distances.
 - Ensure user privacy by allowing location sharing only with explicit consent.
 
@@ -184,6 +184,5 @@ Efficient data management ensures quick access, synchronization across devices, 
 Integrating external APIs allows the app to provide detailed nutritional information, recipe suggestions, and barcode data.
 
 **Implementation**
-- **Spoonacular API**: Used for recipe suggestions, image analysis, and nutritional information.
-- **OpenFoodFacts API**: Used for retrieving barcode information and food composition data.
+- **Spoonacular API**: Used for recipe recommendation.
 

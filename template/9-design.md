@@ -91,7 +91,7 @@ We use JUnit and Mockito for unit testing and Espresso for UI testing. We also u
 
 ## Deployment
 
-Our app will be deployed through the Google Play Store. Personal user data will be stored on our server to ensure enhanced security and privacy. Other data, such as meal entries and posts, will be stored in Firebase Firestore, while static data will be managed using Firebase Storage. Our server will be deployed and maintained to handle personal user data securely. We will establish separate development and production environments to facilitate testing and ensure smooth transitions before the MVP launch.
+Our app will be deployed through the Google Play Store. Personal user data will be stored on our server to ensure enhanced security and privacy. Other data, such as meal entries and posts, will be stored in Firebase Firestore, while static data will be managed using Firebase Storage. We will establish separate development and production environments to facilitate testing and ensure smooth transitions before the MVP launch.
 
 
 

@@ -60,7 +60,7 @@ By implementing these measures, we aim to maintain the highest level of data pro
   - **Basic Plan**: Free access to basic features such as meal tracking, recipe search, and community contributions.
   - **Premium Plan**: Paid subscription offering advanced features such as meal recognition from a picture, personalized meal recommendations, and exclusive content.
 
-- **Marketing Strategies**: Multi-frontal marketing strategies will be used to attract users to the application. These include social media campaigns, influencer partnerships, email marketing, and search engine optimization (SEO) to increase app visibility and user engagement.
+- **Marketing Strategies**: Multi-frontal marketing strategies will be used to attract users to the application. These include social media campaigns, influencer partnerships, email marketing, and search engine optimization to increase app visibility and user engagement.
 
 #### User Onboarding
 
@@ -104,11 +104,7 @@ By implementing these measures, we aim to maintain the highest level of data pro
 1. **Regular Backups**:
    - Schedule daily backups of all vital data with retention periods aligned with business continuity requirements.
    - Store backups in multiple secure locations, including off-site storage facilities.
-   - Implement encryption for both in-transit and at-rest backup data to prevent unauthorized access.
 
-2. **Encryption and Security**:
-   - Use advanced encryption standards (AES-256) for data at rest.
-   - Regularly update encryption keys and rotate them according to industry best practices.
 
 #### Recovery Strategy
 

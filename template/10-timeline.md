@@ -73,7 +73,7 @@ Release version of the app for alpha testers
 |Sprint/Week number | Objective  | Outcomes    |
 | :---------------: | :--------: | :---------: |
 |Week 1| Alpha testing | Deployment of first version of the app to alpha testers and gathering analytics about the app's performances|
-|week 2| Hotfixes and Beta Testing | Identifying issues based on alpha users feedback and fixing them, deploying the app for beta testing and gathering users and feedback from it|
+|Week 2| Hotfixes and Beta Testing | Identifying issues based on alpha users feedback and fixing them, deploying the app for beta testing and gathering users and feedback from it|
 |Week 3| Last fixes and final rollout | Fixing last issues based on analytics and feedback and initiating final rollout along with advertisement to get more users on the app| 
 
 ## Development Resources
@@ -96,7 +96,7 @@ In our predictions the, primary cost of development for our product will be the 
 
 ## Deployment Resources
 
-For safe storage we will need capital to acquire a NAS to use as our main physical storage server and we'll also subscribe to a cold storage service (e.g Amazon Glacier S3) for redundancy to store a copy of our server that could be access if a problem arises with the NAS. The amount of cold storage used will be at 10 TB.
+For safe storage we will need capital to acquire a NAS to use as our main physical storage server, and we will also subscribe to a cold storage service (e.g Amazon Glacier S3) for redundancy to store a copy of our server that could be access if a problem arises with the NAS. The amount of cold storage used will be at least 10 TB.
 
 <div align="center">
 
