@@ -64,6 +64,39 @@ Release version of the app for alpha testers
 |week 2| Hotfixes and Beta Testing | Identifying issues based on alpha users feedback and fixing them, deploying the app for beta testing and gathering users and feedback from it|
 |Week 3| Last fixes and final rollout | Fixing last issues based on analytics and feedback and initiating final rollout along with advertisement to get more users on the app| 
 
+## Development Resources
+
+In our predictions the, primary cost of development for our product will be the developer cost which concerns essentially the team hired to handle the different tasks that pertain to the development of our application. Ideally, on top of a constant team of developers at hand, we would hire part-time team members to handle the UX/UI design and the software testing.
+
+<div align = "center">
+
+|Role           | Number of persons |
+| :-----------: | :---------------: | 
+| Frontend Developer | 3 | 
+| Backend developer | 4 |
+| UX/UI Designers (part-time) | 2 | 
+| Software Testers (part-time) | 2 | 
+| ML engineer | 1 | 
+| Computer Vision Developer | 1 |
+| Data Scientist | 2 |
+| Data Protection Officer | 1 |
+</div>
+
+## Deployment Resources
+
+For safe storage we will need capital to acquire a NAS to use as our main physical storage server and we'll also subscribe to a cold storage service (e.g Amazon Glacier S3) for redundancy to store a copy of our server that could be access if a problem arises with the NAS. The amount of cold storage used will be at 10 TB.
+
+| Item | Cost/Unit | Units | Total |
+| :--: | :-------: | :---: | :---: |
+| NAS | 200-600 CHF | 1 | 200 - 600 CHF |
+| FireBase | Free Tier | - | 0 |
+| Google Analytics | Free Tier | - | 0 | 
+| Amazon Glacier S3 | 3500 CHF + 40CHF/Month | 1 | 3500CHF + 40CHF/Month |
+| **TOTAL** | - | - | 3700-4100CHF + 40CHF/Month | 
+
+## Maintenance and Upkeep
+
+We will need to constantly monitor our AI Model to analyze its performance but also take advantage of tha data from the users to be able to improve our model. We will also need to periodically update the Database created for storing Barcodes and information about food products to expand it and keep it up-to-date. 
 
 
 
